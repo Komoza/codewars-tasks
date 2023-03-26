@@ -1,3 +1,15 @@
+// Write a function that accepts a string consisting only of ASCII letters and space(s) and returns that string in block letters of 5 characters width and 7 characters height, with one space between characters.
+
+// The block letters should consist of corresponding capital letters.
+// It's irrelevant whether input consists of lower or upper case letters.
+// Any leading and/or trailing spaces in input should be ignored.
+// Empty strings or such containing only spaces should return an empty string.
+// The remaining spaces (between letters and/or words) are to be treated as any other character. This means that there will be six spaces in output for a space in input, or a multiple of six, if there were more spaces - plus the one from preceding character!
+// Trailing spaces should be removed in the resulting string.
+// The string should be formatted in a way that when passed to Javascripts' console.log() function shows the desired output (see below for example).
+// There's a Map called alpha preloaded which you can use. Keys are lower case letters and the space.
+
+
 const drawletter = (letter, count) => {
   switch (letter) {
     case "A":
@@ -451,5 +463,7 @@ function blockPrint(input) {
   return result;
 }
 
+console.log('===== BLOCK LETTER PRINT =====');
 console.log(blockPrint("Hello World"));
+console.log('\n\n');
 
