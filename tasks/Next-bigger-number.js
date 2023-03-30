@@ -12,22 +12,23 @@
 // 531 ==> -1
 
 function nextBigger(n) {
-    let arr = String(n).split("");
-    for (let i = arr.length - 1; i >= 0; i--) {
-      for (let j = arr.length - 1; j > i; j--) {
-        if (arr[j] > arr[i]) {
-          let tmp = arr[j];
-          arr[j] = arr[i];
-          arr[i] = tmp;
-  
-          tmp = arr.slice(i + 1).sort((a, b) => a - b);
-          arr = [...arr.slice(0, i + 1), ...tmp];
-          return Number(arr.join(""));
-        }
+  let arr = String(n).split("");
+  for (let i = arr.length - 1; i >= 0; i--) {
+    for (let j = arr.length - 1; j > i; j--) {
+      if (arr[j] > arr[i]) {
+        let tmp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = tmp;
+
+        tmp = arr.slice(i + 1).sort((a, b) => a - b);
+        arr = [...arr.slice(0, i + 1), ...tmp];
+        return Number(arr.join(""));
       }
     }
-    return -1;
   }
+  return -1;
+}
 
-  console.log('===== NEXT BIGGER NUMBER =====');
-  console.log(nextBigger(421323));
+console.log("===== NEXT BIGGER NUMBER =====");
+console.log(nextBigger(421323));
+console.log("\n\n");
