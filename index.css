@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    list-style: none;
+}
+
 li {
     list-style: none;
 }
@@ -21,4 +25,12 @@ li {
 
 .list {
     font-size: 18px;
+}
+.link {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link:hover {
+    color: black;
 }
